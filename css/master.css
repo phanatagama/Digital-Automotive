@@ -86,6 +86,9 @@ nav a {
 		display: flex;
 		flex-wrap: wrap;
 	}
+	.navigation{
+		display: none;
+	}
 }
 h1{font-size: 30px;}
 button {
