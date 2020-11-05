@@ -1,3 +1,4 @@
+/*reset*/
 * {
 	box-sizing: border-box;
 	max-width: 100%;
@@ -9,8 +10,27 @@ html,body {
 	font-family: 'Poppins', sans-serif;
     font-weight: 400;
     line-height: 24px;
+    overflow-x: hidden;
 }
 
+/*general*/
+.box-content{
+	width: 100%;
+  	margin-right: auto;
+  	margin-left: auto;
+  	max-width: 1140px;
+}
+.element{
+	margin: 0 5px;
+}
+h1{font-size: 30px;}
+hr{
+	margin-top: 1rem;
+  	margin-bottom: 1rem;
+  	border: 0;
+  	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+span,a{ text-decoration: none; color: blue; }
 
 /*navigasi*/
 nav {
@@ -19,13 +39,22 @@ nav {
   	align-items: center;
   	height: 50px;
   	z-index: 1;
+  	top: 0;
+	left: 0;
+	width: 100%;
+  	transition: all 0.4s;
+  	background: transparent;
 }
 nav a {
   	font-size: 1.25rem;
   	text-decoration: none;
 	color: white;
 }
-.navigation ul{
+nav .box-content{
+  	display: flex;
+  	justify-content: space-between;
+}
+.navigation ul {
 	list-style: none;
 	display: flex;
 	/*align-items: center;*/
@@ -35,24 +64,51 @@ nav a {
   	color: white;
   	margin: 0 14px;
 }
-.navigation ul li a:hover, .navigation ul li a:focus{color: red;}
-.nav-scroll{
-	position: fixed;
-	top: 0;
-	left: 0;
-	transition: all 0.4s;
-	width: 100%;
-	z-index: 4;
-	background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+.navigation ul li a:hover, .navigation ul li a:focus{color: black;}
+
+/*mobile nav*/
+.toggle{
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  margin: 0 10px;
 }
-.box-content{
+.toggle span{
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 576px){
+  .toggle{
+    display: flex;
+  }
+  nav ul {
   	width: 100%;
-  	margin-right: auto;
-  	margin-left: auto;
-  	max-width: 1140px;
-  	display: flex;
-  	justify-content: space-between;
+    position: absolute;
+    top: 0;  
+    height: 50vh;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: -1;
+    right: 0;
+    flex-direction: column;
+    background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+    transform: translateY(-100%);
+    transition: all .4s;
+  }
+  nav ul.slide{
+    transform: translateY(0);
+  }
 }
+
+
 
 
 /*bagian 1*/
@@ -64,7 +120,8 @@ nav a {
 	background-size: cover;
 	padding-top: 180px;
 }
-.section-1::before {
+
+.section-1::before, .section-3::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -74,23 +131,19 @@ nav a {
 	opacity: 0.7;
 	background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
 }
-.section-1 .box-content{position: relative;}
+.section-1 .box-content,.section-3 .box-content{position: relative;}
 .section-1 .box-content .box-element{
 	display: grid;
 	grid-template-columns: 1.4fr 1fr;
 	color: white;
 }
 /*responsive*/
-@media (max-width: 578px){
+@media screen and (max-width: 768px){
 	.section-1 .box-content .box-element{
 		display: flex;
 		flex-wrap: wrap;
 	}
-	.navigation{
-		display: none;
-	}
 }
-h1{font-size: 30px;}
 button {
   	padding: 8px 16px;
   	font-size: 20px;
@@ -122,7 +175,7 @@ button[type=submit]{
 	display: flex;
 	margin: 15px auto;
 }
-input {
+input{
   	padding: 6px 12px;
   	line-height: 2;
   	border: 1px solid white;
@@ -131,4 +184,132 @@ input {
   	width: 60%;
 }
 input:focus{box-shadow: 0 0 0 3.2px rgba(0, 100, 255, 0.5);}
-img[alt="Harley Queen"]{height: 100%;}
+img[alt="Harley Queen"] {
+	width: auto;
+	height: 100%;}
+
+/*product*/
+#product{padding: 50px;}
+#product .box-content .box-element:first-child,
+#product .box-content .box-element:first-child .element,
+#service .box-content .box-element:first-child .element{
+	text-align: center;
+	justify-content: center;
+}
+#product .box-content .box-element{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.single-product{
+	opacity: 0;
+	transform: translate(0, 50px);
+  	text-align: center;
+  	box-shadow: 0 2px 15px -5px #222;
+  	transition: all 0.4s;
+  	max-width: 350px;
+  	margin: 10px 0;
+}
+.single-product.show{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.product-img{
+  	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+img[alt="product image"]{
+	transition: 1s;
+}
+img[alt="product image"]:hover{
+	transform: scale(1.2);
+}
+.product-info{padding: 20px 10px;
+	max-height: 300px;
+	overflow: hidden;
+}
+.product-btn {
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+    padding: 6px 25px;
+    display: inline-block;
+    font-weight: 500;
+    color: white;
+}
+.product-btn:hover {
+    border: 1px solid black;
+    background: transparent;
+    background-image: none;
+    color: black;
+}
+
+/*service*/
+.section-3{
+	position: relative;	
+	background-image: url('../img/page3.jpg');
+	background-size: cover;
+	padding-top: 180px;	
+}
+#service{padding: 50px;}
+#service .box-content .box-element:first-child{
+	color: white;
+	margin-bottom: 30px;
+}
+.section-3 .box-content .box-element:last-child{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	color: white;
+}
+@media screen and (max-width: 768px){
+	.section-3 .box-content .box-element:last-child{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.section-3 .box-content .box-element:last-child .element:first-child .desc,
+	.section-3 .box-content .box-element:last-child .element:last-child .desc{
+		text-align: center;
+	}
+}
+.section-3 .box-content .box-element:last-child .element ul{
+	list-style: none;
+}
+.section-3 .box-content .box-element:last-child .element ul li{
+	display: flex;
+}
+.box-content .box-element:last-child .element:last-child .desc{
+	text-align: left;
+	order: 2;
+	transform: translate(-50px,0);
+}
+.box-content .box-element:last-child .element:last-child .desc.showDesc,.desc.showDesc{
+	opacity: 1;
+	transform: translate(0,0);
+}
+.desc{
+	text-align: right;
+	flex: 5;
+	opacity: 0;
+	transform: translate(50px,0);
+	transition: 1s;
+}
+.box-icon{
+	display: flex;
+	flex: 1;
+	justify-content: center; 
+}
+.icon{
+	display: flex;
+	width:40px;
+	height: 40px;
+	border-style: dashed;
+	border-color: white;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+}
+.icon:hover{
+	border-radius: 0;
+	transition: all 0.4s;
+}

@@ -1,0 +1,28 @@
+{
+	"product":[
+		{
+			"name": "Buggati Chiron",
+			"image": "product1.png",
+			"describe": "Isuzu Mu-X bisa menjadi sebuah pilihan menarik bagi Anda para pecinta SUV. mobil ini dibangun dengan tampang yang gagah dan modern"
+		},
+		{
+			"name": "Ferrari Portfino",
+			"image": "product2.png",
+			"describe": "BMW X1 menekankan konsep mobil atletis nan kompak tanpa menghilangkan unsur desain tampilan(SAV) khas keluarga BMW X Series"
+		},
+		{
+			"name": "McLaren Senna",
+			"image": "product3.png",
+			"describe": "Toyota New Veloz hadir dengan kemewahan sebuah MPV. Fitur keselamatan memberikan kenyamanan ekstra yang senantiasa menemani perjalanan Anda"
+		},
+		{
+			"name": "Porsche",
+			"image": "product4.png",
+			"describe": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+		},
+		{
+			"name": "Chevrolet Corvette",
+			"image": "product5.png",
+			"describe": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+		}]
+}
