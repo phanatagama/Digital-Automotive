@@ -1,0 +1,42 @@
+*
+h2{
+    position: absolute;
+    padding: 27px 0px 0px 715px;
+    font-size: 70%;
+    color: grey;
+    
+}
+h3{
+    position: absolute;
+    padding: 27px 0px 0px 227px;
+    font-size: 70%;
+    color: grey;
+}
+h4{
+    position: absolute;
+    padding: 26px 0px 0px 1252px;
+    font-size: 70%;
+    color: grey;
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(0, 0, 0);
+}
+.kontainer{
+    display: flex;
+}
+.testimoni{
+    width: 33%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+p{
+    font-size: 30px;
+    text-align: center;
+    margin: 30px 100px 0px 90px;
+    font-family: sans-serif;
+    border-style: hidden;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
