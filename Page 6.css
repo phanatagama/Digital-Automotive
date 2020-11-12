@@ -1,0 +1,78 @@
+*
+body{
+	background-repeat: no-repeat;
+}
+.box{
+	background-color: rgb(0, 0, 146);
+	margin: 155px 580px 0px 800px;
+	padding: 10px 10px 0px 0px;
+	height: 45px;
+	position: absolute;
+	right: 20px;
+	width: 4%;
+	border-radius: 8px;	
+}
+.info{
+	background-color: black;
+	color: white;
+	position: absolute;
+	margin: 0px 200px 0px 580px;
+	height: 380px;
+	top: 190px;
+	right: 9px;
+	left: 300px;
+	font-size: 22px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: bold;
+	border-radius: 8px;
+}
+.kontak{
+	margin: 10px 50px 0px 40px;
+}
+img{
+    width: 16%;
+}
+h1{
+    font-size: 60px;
+    padding-left: 250px;
+}
+
+p{
+    font-size: 18px;
+    padding-left: 250px;
+}
+.contact{
+position: absolute;
+top: 200px;
+left: 220px;
+box-sizing: border-box;
+padding: 40px;
+width: 300px;
+height: 400px;
+}
+
+input[type="text"],
+textarea{
+display: block;
+box-sizing: border-box;
+margin-bottom: 40px;
+padding: 10px;
+width: 240px;
+height: 80px;
+border: none;
+outline: none;
+border-bottom: 5px solid black;
+font-family: sans-serif;
+font-weight: 400;
+font-size: 15px;
+transition: 0.5s ease;
+}
+input[type=submit]{
+	width: 11%;
+	position: absolute;
+	padding: 15px;
+	margin: 350px 290px;
+	color: rgb(0, 0, 146);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 90%;
+}
