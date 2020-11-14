@@ -10,14 +10,48 @@
 </head>
 <body>
 	<header>
-		<nav>
+		<nav>				
 			<div class="box-content">
 				<a href="#home" class="nav brand">OTOMOTIF</a>
 				<div class="navigation">
 					<ul>
 						<li><a href="#home" class="nav">Home</a></li>
-						<li><a href="#product" class="nav">Product</a></li>
-						<li><a href="#service" class="nav">Service</a></li>
+						<li class="dropdown"><a href="#product" class="nav">Product</a>
+							<div class="modal-nav">
+								<div class="nav-content">
+								  	<div class="nav-body">
+								  		<div class="nav-img"></div>
+								  		<div class="desc-1">
+								  			<ul>
+								  				<li><h2><a href="">Dunlop</a></h2></li>
+								  				<li><h2><a href="">GT Radial</a></h2></li>
+								  				<li><h2><a href="">Accelera</a></h2></li>
+								  				<li><h2><a href="">Hankook</a></h2></li>
+								  				<li><h2><a href="">GT Super</a></h2></li>
+								  			</ul>
+								  		</div>
+								  		<div class="desc-2">
+								  			<ul>
+								  				<li><h2><a href="">Achiles</a></h2></li>
+								  				<li><h2><a href="">Brigestone</a></h2></li>
+								  				<li><h2><a href="">Ecopia</a></h2></li>
+								  				<li><h2><a href="">Honda</a></h2></li>
+								  				<li><h2><a href="">BXT Pro</a></h2></li>
+								  			</ul>
+								  		</div>
+								  	</div>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown"><a href="#service" class="nav">Service</a>
+						<ul class="isi-dropdown">
+								<li><a href="#">Modif Itasha</a></li>
+								<li><a href="#">Isi Nitrogen</a></li>
+								<li><a href="#">Pasang Turbo</a></li>
+								<li><a href="#">Ganti Oli</a></li>
+								<li><a href="#">Cuci Mobil</a></li>
+							</ul>
+						</li>
 						<li><a href="#partner" class="nav">Partner</a></li>
 						<li><a href="#contact" class="nav">Contact Us</a></li>
 					</ul>
@@ -284,7 +318,7 @@
         <section id="partner">
                 <div class="box-content">
                 	<div class="partner-title">
-                    	<h1>OUR PARTNERSHIP</h1>
+                    	<h1>Our Partnership</h1>
                     <hr>
                 	</div>
                     <div class="partner">
@@ -321,7 +355,7 @@
 				          <input type="text" name="name" placeholder="Full name">
 				          <input type="text" name="name" placeholder="Email">
 				          <input type="text" name="name" placeholder="Message">
-				        <button type="submit" href="/">SEND</button>
+				        <button type="submit" class="pesan-btn" href="/">SEND</button>
 				        </div>
 			      	</form>
 			      <div class="info-contact">
@@ -345,6 +379,44 @@
 			      </div>
 	        	</div> 
     	</section>
+    	<div class="pesan">
+		  <div class="pesan-content">
+		  	<div class="pesan-head">
+			    <span class="close">&times;</span>
+			    <h1>Pesan Anda Telah Terkirim</h1>
+		  	</div>
+		  	<hr>
+		  	<br>
+		  	<div class="pesan-body">
+		  		<!-- <div class="modal-img">
+		  			<img src="../../Perancangan Website/Project/img/product1.png">
+		  		</div> -->
+		  		<div class="isi-pesan">
+		  			<table border="1" width="100%">
+					  				
+					  				<tr>
+					  					<th><h3>NAMA </h3></th>
+					  					<td><b>:Anya Geraldine</b></td>
+					  				</tr>
+					  				<tr>
+					  					<th><h3>EMAIL </h3></th>
+					  					<td><b>:anyageraldine@gmail.com</b></td>
+					  				</tr>
+					  				<tr>
+					  					<th><h3>PESAN</h3></th>
+					  					<td><b>:Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					  					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					  					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					  					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					  					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					  					proident, sunt in culpa qui officia deserunt mollit anim id est.</b></td>
+					  				</tr>
+					  			</table> 
+		  		</div>
+		  		
+		  	</div>
+		  </div>
+		</div>
 	</main>
 	<footer>
 		<marquee><h1>Copyright &copy; 2020. All Rights Reserved</h1></marquee>

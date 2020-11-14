@@ -126,11 +126,11 @@ input[name="name"] {
     width: 100%;
 }
 form.form button {
+	background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
     padding: 10px 5px;
     margin-top: 20px;
  	border-radius: 5px; 
-    border: none;
-    background: #26a9e0; 
+    border: none; 
     text-decoration: none;
     font-size: 15px;
     font-weight: 400;
@@ -139,7 +139,7 @@ form.form button {
     margin-left: 0;
 }
 form.form button:hover {
-    background: #85d6de;
+    background: #0074d9;
 }
 
 .info-contact{
@@ -171,4 +171,34 @@ footer{
 	color: white;
 	place-items: center;
 	line-height: 50px;
+}
+/*pesan*/
+.pesan {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+	background-color: rgba(0,0,0,0.4);
+	overflow: auto;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+}
+.pesan-content {
+  background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  color: white;
+}
+.pesan-body{
+  display: grid;
+  place-content: stretch;
+}
+
+.isi-pesan{
+  border-left: 2px solid black;
+  place-self: center;
 }

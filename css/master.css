@@ -14,7 +14,6 @@ html,body {
 }
 
 /*general*/
-
 .box-content{
 	width: 100%;
   margin-right: auto;
@@ -30,6 +29,70 @@ hr{
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 span,a{ text-decoration: none; color: blue; }
+
+/*modal nav*/
+.modal-nav {
+  display: none; 
+  position: absolute; 
+  z-index: 1; 
+  margin-top: 10px; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+}
+.nav-content {
+  background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+  margin: auto;
+  padding: 20px;
+  width: 60%;
+  color: white;
+}
+.nav-body{
+  display: grid;
+  grid-template-areas: 'gambar desc-1 desc-2';
+  grid-gap: 20px;
+  place-content: stretch;
+}
+.nav-img{
+  grid-area: gambar;
+  width: 130%;
+  min-height: 200px;
+  background-image: url("../img/product3.png");
+  background-size: cover;
+  background-position: center;
+}
+.desc-1{
+  grid-area: desc-1;
+  border-left: 2px solid black;
+  place-self: center;
+  padding-left: 25%;
+}
+.desc-2{
+  grid-area: desc-2;
+  place-self: center;
+  padding-left: 25%;
+  border-left: 2px solid black;
+}
+div.desc-1 ul,div.desc-2 ul{
+  display: block;
+}
+.desc-1 ul li,.desc-2 ul li{
+  list-style: none;
+  margin: 10px auto;
+}
+.desc-1 ul li a, .desc-2 ul li a{
+  text-decoration: none;
+  color: white;  
+}
+.desc-1 ul li a:hover, .desc-2 ul li a:hover{
+  color: black;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px){
+  .nav-content{
+    display: none;
+  }
+}
 
 /*navigasi*/
 nav {
@@ -64,6 +127,19 @@ nav .box-content{
 }
 .navigation ul li a:hover{color: black;}
 
+li.dropdown:hover ul.isi-dropdown,li.dropdown:hover div.modal-nav {
+  display: block;
+  }
+li.dropdown ul.isi-dropdown {
+  margin-top: 10px;
+  position: absolute;
+  display: none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background-color: #005db5;
+}
+
+
 /*mobile nav*/
 .toggle{
   display: none;
@@ -80,13 +156,11 @@ nav .box-content{
   background-color: white;
   border-radius: 3px;
 }
-
-/*responsive*/
 @media screen and (max-width: 576px){
   .toggle{display: flex;}
   .brand{
-  padding-left: 15px;
-}
+    padding-left: 15px;
+  }
   nav ul {
   	width: 100%;
     position: absolute;
@@ -102,10 +176,13 @@ nav .box-content{
     transition: all .4s;
   }
   nav ul.slide{transform: translateY(0);}
+  li.dropdown:hover ul.isi-dropdown {
+    display: none; 
+  }
 }
 
 
-/* The Modal (background) */
+/*  Modal  */
 .modal {
   display: none;
   position: fixed; 
@@ -122,7 +199,6 @@ th{
   vertical-align: top;
   width: 30%;
 }
-/* Modal Content */
 .modal-content {
   background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
   margin: auto;
@@ -143,14 +219,6 @@ th{
   overflow: hidden;
   justify-content: center;
 }
-@media screen and (max-width: 992px){
-  .modal-body{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-  }
-}
 .close {
   color: white;
   float: right;
@@ -163,7 +231,14 @@ th{
   text-decoration: none;
   cursor: pointer;
 }
-
+@media screen and (max-width: 992px){
+  .modal-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 
 /*bagian 1*/
 .section-1 {
@@ -174,7 +249,7 @@ th{
 	background-size: cover;
 	padding-top: 180px;
 }
-.section-1::before, .section-3::before {
+.section-1:before, .section-3:before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -190,43 +265,24 @@ th{
 	grid-template-columns: 1.4fr 1fr;
 	color: white;
 }
-/*responsive*/
-@media screen and (max-width: 768px){
-	.section-1 .box-content .box-element{
-		display: flex;
-    flex-direction: column;
-	}
-}
-@media only screen and (max-width: 576px){
-		.section-1 .box-content .box-element div.element:last-child {
-      display: grid;
-      place-items: center;
-      max-height: 350px;
-    }
-    .btn-group input{
-      width: 100%;
-    }
-    a button{
-      width: 100%;
-    }
-}
 button {
-  	padding: 8px 16px;
-  	font-size: 20px;
-  	line-height: 1.5;
-  	border-radius: 4.8px;
-  	color: white;
-  	border-color: white;
-  	background-color: transparent;
-  	border: 1px solid;
-  	transition: 0.3s ease-in-out;
-  	margin-right: 10px;
-  	margin-top: 10px;
+ 	padding: 8px 16px;
+ 	font-size: 20px;
+ 	line-height: 1.5;
+ 	border-radius: 4.8px;
+	color: white;
+ 	border-color: white;
+ 	background-color: transparent;
+ 	border: 1px solid;
+	transition: 0.3s ease-in-out;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 button:hover {
 	color: black;
  	background-color: white;
  	border-color: white;
+  cursor: pointer;
 }
 button:focus{box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);}
 button[type=submit]{
@@ -242,17 +298,36 @@ button[type=submit]{
 	margin: 15px auto;
 }
 input{
-  	padding: 6px 12px;
-  	line-height: 2;
-  	border: 1px solid white;
-  	border-radius: 25px;
-  	transition: 0.2s ease-in-out;
-  	width: 60%;
+  padding: 6px 12px;
+  line-height: 2;
+  border: 1px solid white;
+  border-radius: 25px;
+  transition: 0.2s ease-in-out;
+  width: 60%;
 }
 input:focus{box-shadow: 0 0 0 3.2px rgba(0, 100, 255, 0.5);}
 img[alt="Harley Queen"] {
 	width: auto;
 	height: 100%;}
+@media screen and (max-width: 768px){
+  .section-1 .box-content .box-element{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 576px){
+  .section-1 .box-content .box-element div.element:last-child {
+    display: grid;
+    place-items: center;
+    max-height: 350px;
+  }
+  .btn-group input{
+    width: 100%;
+  }
+  a button{
+    width: 100%;
+  }
+}
 
 /*product*/
 #product{padding: 50px;}
@@ -270,11 +345,11 @@ img[alt="Harley Queen"] {
 .single-product{
 	opacity: 0;
 	transform: translate(0, 50px);
-  	text-align: center;
-  	box-shadow: 0 2px 15px -5px #222;
-  	transition: all 0.4s;
-  	max-width: 350px;
-  	margin: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 15px -5px #222;
+  transition: all 0.4s;
+  max-width: 350px;
+  margin: 10px 0;
 }
 .single-product.show{
 	opacity: 1;
@@ -292,19 +367,19 @@ img[alt="product image"]:hover,img[alt="order image"]:hover{transform: scale(1.2
 	overflow: hidden;
 }
 .product-btn {
-    border: 1px solid transparent;
-    border-radius: 25px;
-    background-image: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
-    padding: 6px 25px;
-    display: inline-block;
-    font-weight: 500;
-    color: white;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+  padding: 6px 25px;
+  display: inline-block;
+  font-weight: 500;
+  color: white;
 }
 .product-btn:hover {
-    border: 1px solid black;
-    background: transparent;
-    background-image: none;
-    color: black;
+  border: 1px solid black;
+  background: transparent;
+  background-image: none;
+  color: black;
 }
 
 /*service*/
@@ -323,16 +398,6 @@ img[alt="product image"]:hover,img[alt="order image"]:hover{transform: scale(1.2
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	color: white;
-}
-@media screen and (max-width: 768px){
-	.section-3 .box-content .box-element:last-child{
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.section-3 .box-content .box-element:last-child .element:first-child .desc,
-	.section-3 .box-content .box-element:last-child .element:last-child .desc{
-		text-align: center;
-	}
 }
 .section-3 .box-content .box-element:last-child .element ul{
 	list-style: none;
@@ -373,5 +438,15 @@ img[alt="product image"]:hover,img[alt="order image"]:hover{transform: scale(1.2
 }
 .icon:hover{
 	border-radius: 0;
-	transition: all 0.4s;
+	transition: 0.4s;
+}
+@media screen and (max-width: 768px){
+  .section-3 .box-content .box-element:last-child{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section-3 .box-content .box-element:last-child .element:first-child .desc,
+  .section-3 .box-content .box-element:last-child .element:last-child .desc{
+    text-align: center;
+  }
 }

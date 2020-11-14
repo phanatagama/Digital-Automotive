@@ -44,7 +44,7 @@ $.getJSON('js/product.json', function(products){
 			<div class="element">
 						<div class="single-product">
 							<div class="product-img">
-								<img src="img/${products.image}" lazy="load" alt="${products.name}">
+								<img src="img/${products.image}" lazy="load" alt="product image">
 							</div>
 							<div class="product-info">
 								<h3><a class="product-btn" href="${products.url}"><b>${products.name}</b></a></h3>
@@ -58,10 +58,14 @@ $.getJSON('js/product.json', function(products){
 	})
 });
 
-// modal
+// modal dan pesan
 $('.btn').click(function(){
 	$('.modal').css({"display": "block"});
 })
+$('.pesan-btn').click(function(){
+	$('.pesan').css({"display": "block"});
+})
 $('.close').click(function(){
 	$('.modal').css({"display": "none"});
+	$('.pesan').css({"display": "none"});
 })
