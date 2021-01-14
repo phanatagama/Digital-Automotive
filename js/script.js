@@ -1,71 +1,99 @@
- // scroll
+// animate on scroll
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
-	// parallax desc
-	$('.section-1 .box-content .box-element .element:first-child').css({'transform':`translate(0,${document.documentElement.scrollTop/20}%)`});
-	// navbar show
-	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-	  	$('nav').css({"position":"fixed","background":"linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%)"});
-	  	$('.section-1').css({"margin-top": 0});
-  	} else {
-	  	$('.section-1').css({"margin-top": "-50px"});
-	  	$('nav').css({"position":"relative","background":"transparent"});
-  	}
   // animasi product
-  	if (document.documentElement.scrollTop > $('#product').offset().top-200){
-  		$('.single-product').each(function(i){
-  			setTimeout(function(){
-  				$('.single-product').eq(i).addClass('show');
-  			},300*(i+1))
-  		})
-  	}
+    if (document.documentElement.scrollTop > $('#PRODUCT').offset().top-200){
+        $('.single-product').each(function(i){
+            setTimeout(function(){
+                $('.single-product').eq(i).addClass('show');
+            },300*(i+1))
+        })
+    } else {
+        $('.single-product').each(function(i){
+            setTimeout(function(){
+                $('.single-product').eq(i).removeClass('show');
+            },300*(i+1))
+        })
+    }
   // animasi service
-  	if (document.documentElement.scrollTop > $('#service').offset().top-200){$('.desc').addClass('showDesc');}
+   if (document.documentElement.scrollTop > $('#SERVICE').offset().top-200){
+    $('.service-desc-1').addClass('show');
+    $('.service-desc-2').addClass('show');
+    } else{
+        $('.service-desc-1').removeClass('show');
+        $('.service-desc-2').removeClass('show');
+    }
 } 
-
-// navbar smoot-scroll
-$('.nav').click(function(event){
-	const dest = $(this).attr('href');
-	const elemen = $(dest);
-	$('html, body').animate({
-		scrollTop: elemen.offset().top-50
-	},1000);
-	event.preventDefault();
+// toggle mobile
+$('.toggle').click(function(){
+	$('nav ul').toggleClass('mobile');
 });
 
-// navbar mobile
-$('.toggle').click(function(){$('nav ul').toggleClass('slide');})
-
-// product json
-$.getJSON('js/product.json', function(products){
-	let product = products.product;
-	$.each(product, function(i,products){
-		$('#product .box-content .box-element:last-child').append(`
-			<div class="element">
-						<div class="single-product">
-							<div class="product-img">
-								<img src="img/${products.image}" lazy="load" alt="product image">
-							</div>
-							<div class="product-info">
-								<h3><a class="product-btn" href="${products.url}"><b>${products.name}</b></a></h3>
-								<hr>
-								<p>${products.describe}
-								</p>
-							</div>
-						</div>
-					</div>
-					`);
-	})
+// data json
+$.getJSON('js/product.json', products => {
+    let product = products.product;
+    $.each(product, (i,products) => {
+        $('.product-body.grid').append(`
+            <div class="single-product grid">
+                        <div class="product-img"></div>
+                        <div class="product-btn center my-10">
+                            <h3><a class="product-click my-5 text-white" href="${products.url}"><b>${products.name}</b></a></h3>
+                            <hr>
+                        </div>
+                        <div class="product-describe px-10 text-justify">
+                            ${products.describe}
+                        </div>
+                    </div>
+                    `);
+    })
 });
+$.getJSON('js/service.json', services =>{
+    let service1 = services.service1;
+    let service2 = services.service2;
+    $.each(service1, (i,services) => {
+        $('.service-desc-1 ul').append(`
+            <li class="flex mb-20">
+                                <div class="service-item">
+                                    <h2><b>${services.title}</b></h2>
+                                    <p>${services.describe}</p>
+                                </div>
+                                <div class="service-icon flex">
+                                    <b class="icon center flex">✔</b>
+                                </div>
+                            </li>
+                    `);
+    });
+    $.each(service2, function(i,services){
+        $('.service-desc-2 ul').append(`
+            <li class="flex mb-20">
+                                <div class="service-icon flex">
+                                    <b class="icon center flex">✔</b>
+                                </div>
+                                <div class="service-item">
+                                    <h2><b>${services.title}</b></h2>
+                                    <p>${services.describe}</p>
+                                </div>                
+                            </li>
+                    `);
+    })
+});
+
 
 // modal dan pesan
-$('.btn').click(function(){
-	$('.modal').css({"display": "block"});
-})
-$('.pesan-btn').click(function(){
-	$('.pesan').css({"display": "block"});
+$('button[name="lacak"]').click(function(){
+    $('.modal').css({"display": "block"});
 })
 $('.close').click(function(){
-	$('.modal').css({"display": "none"});
-	$('.pesan').css({"display": "none"});
+    $('.modal').css({"display": "none"});
 })
+// document.addEventListener('DOMContentLoaded', function() {
+//     var parent = document.querySelector('#OWNER .container'),
+//         topPanel = parent.querySelector('.top'),
+//         handle = parent.querySelector('.handle'),
+//         delta = 0;
+//     parent.addEventListener('mousemove', function(event) {
+//         delta = (event.clientX - window.innerWidth / 2) * 0.5;
+//         handle.style.left = event.clientX + delta + 'px';
+//         topPanel.style.width = event.clientX + delta + 'px';
+//     });
+// });

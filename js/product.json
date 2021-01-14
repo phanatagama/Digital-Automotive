@@ -4,25 +4,31 @@
 			"name": "Bugatti Chiron",
 			"image": "product1.png",
 			"url": "https://tokopedia.com",
-			"describe": "Bugatti Chironbisa menjadi sebuah pilihan menarik bagi Anda para pecinta SUV. mobil ini dibangun dengan tampang yang gagah dan modern"
+			"describe": "Bugatti Chironbisa menjadi sebuah pilihan menarik bagi Anda para pecinta SUV. mobil ini dibangun dengan tampang yang gagah dan modern. Bugatti Chironbisa menjadi sebuah pilihan menarik bagi Anda para pecinta SUV. mobil ini dibangun dengan tampang yang gagah dan modern"
 		},
 		{
 			"name": "Ferrari Portfino",
 			"image": "product2.png",
 			"url": "https://tokopedia.com",
-			"describe": "Ferrari Portfino menekankan konsep mobil atletis nan kompak tanpa menghilangkan unsur desain tampilan(SAV) khas keluarga BMW X Series"
+			"describe": "Ferrari Portfino menekankan konsep mobil atletis nan kompak tanpa menghilangkan unsur desain tampilan(SAV) khas keluarga BMW X Series. Ferrari Portfino menekankan konsep mobil atletis nan kompak tanpa menghilangkan unsur desain tampilan(SAV) khas keluarga BMW X Series"
 		},
 		{
 			"name": "McLaren Senna",
 			"image": "product3.png",
 			"url": "https://tokopedia.com",
-			"describe": "McLaren Senna hadir dengan kemewahan sebuah MPV. Fitur keselamatan memberikan kenyamanan ekstra yang senantiasa menemani perjalanan Anda"
+			"describe": "McLaren Senna hadir dengan kemewahan sebuah MPV. Fitur keselamatan memberikan kenyamanan ekstra yang senantiasa menemani perjalanan Anda. McLaren Senna hadir dengan kemewahan sebuah MPV. Fitur keselamatan memberikan kenyamanan ekstra yang senantiasa menemani perjalanan Anda"
 		},
 		{
-			"name": "Porsche",
+			"name": "Porsche Series XII",
 			"image": "product4.png",
 			"url": "https://tokopedia.com",
 			"describe": "Porsche menekankan konsep mobil atletis nan kompak tanpa menghilangkan unsur desain tampilan Sports Activity Vehicle (SAV) khas keluarga BMW X Series. BMW X Series ditujukan bagi masyarakat urban aktif dan gemar berpetualang.Di sisi lain, BMW X1 juga tetap mengutamakan kenyamanan serta kemampuan berkendara impresif di medan on-road maupun off-road. "
+		},
+		{
+			"name": "Chevrolet Corvette",
+			"image": "product5.png",
+			"url": "https://tokopedia.com",
+			"describe": "Bisa dibilang, Chevrolet Corvette adalah salah satu mobil yang paling fenomenal saat ini. Mengusung tampilan crossover dengan siluet bodi khas coupe, Toyota All-New C-HR ternyata banyak terinspirasi oleh diamond shape. Nama C-HR sendiri diambil dari singkatan dari Compact-High Rider yang masuk dalam jenis compact SUV dengan keandalan di semua medan jalan."
 		},
 		{
 			"name": "Chevrolet Corvette",

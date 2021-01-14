@@ -1,0 +1,28 @@
+{
+	"service1":[
+		{
+			"title": "Best Quality",
+			"describe": "Semua produk otomotif/sparepart dan onderdil mempunyai kualitas yang bagus dan terjamin. Barang baru maupun lama telah diseleksi dengan detail sesuai standar kelayakan pemakaian."
+		},
+		{
+			"title": "Full Support",
+			"describe": "Tidak perlu ragu bila anda belum pernah mencoba service kami. Jika terdapat kendala, kami siap membantu selama 24 jam penuh kapan pun dan dimana pun anda berada."
+		},
+		{
+			"title": "Community",
+			"describe": "Komunitas kami tersebar di berbagai penjuru dunia. Bergabung bersama para pecinta otomotif dan ubah harimu jadi lebih berwarna dengan variasi serta modifikasi kendaraan yang lebih keren"
+		}],
+	"service2":[
+		{
+			"title": "Professional",
+			"describe": "Karyawan kami telah berpengalaman selama 10 tahun di bidang otomotif. Masing-masing individu pasti memiliki sertifikasi profesi yang diberikan oleh Badan Nasional Sertifikasi Profesi."
+		},
+		{
+			"title": "Cheap",
+			"describe": "Jual/beli product dan service kami berikan harga murah tapi bukan murahan. Product langka kami tekan harga hingga nilai terkecil dan banyak bonus tambahan bila anda menjadi pelanggan tetap Digital Otomotive"
+		},
+		{
+			"title": "Safety",
+			"describe": "Kendaraan atau sparepart diservice dengan hati-hati dan terhindar dari lecet, dengan garansi 1 tahun bila terjadi kerusakan yang tidak disengaja setelah melakukan service disini"
+		}]
+}
