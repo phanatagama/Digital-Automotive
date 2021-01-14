@@ -1,7 +1,13 @@
-* , body , html{
-	box-sizing: border-box;
+:root{
+	--primary-color: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+	--secondary-color: #fff;
+}
+* {
 	margin: 0;
 	padding: 0;
+}
+body , html{
+	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 	scroll-behavior: smooth;
 }
@@ -31,7 +37,7 @@ section{
 	text-align: justify;
 }
 .blue{
-	background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+	background: var(--primary-color);
 }
 .p-5{
 	padding: 5px;
@@ -90,7 +96,7 @@ section{
 	margin-bottom: 30px;
 }
 .text-white{
-	color: white;
+	color: var(--secondary-color);
 }
 .center{
 	justify-content: center;
@@ -110,14 +116,12 @@ section{
 
 /*navbar*/
 nav{
-	height: 70px;
+	height: 10vh;
 	left: 0;
 	position: fixed;
 	z-index: 999;
 	right: 0;
 	top: 0;
-	border-bottom-left-radius: 100vh;
-	border-bottom-right-radius: 100vh;
 	box-shadow: 0 2px 15px -5px #222;
 }
 ul li{
@@ -130,7 +134,7 @@ a{
 	max-width: 30%;
 }
 .nav-link{
-	height: 70px;
+	height: 10vh;
 }
 .nav-link:hover{
 	background-color: #00387a;
@@ -149,7 +153,7 @@ nav .container{
 .dropdown{
 	flex-direction: column;
 	position: absolute;
-	top: 70px;
+	top: 10vh;
 	padding: 5px;
 	left: 0;
 	right: 0;
@@ -178,7 +182,7 @@ nav .container{
 .toggle span{
 	width: 30px;
 	height: 15%;
-	background-color: white;
+	background-color: var(--secondary-color);
 	border-radius: 3px;
 }
 
@@ -196,7 +200,7 @@ nav .container{
 #HOME:before,#SERVICE:before,#PARTNER:before, .liquid:before{
 	content: "";
 	position: absolute;
-	background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+	background: var(--primary-color);
 	top: 0;
 	left: 0;
 	right: 0;
@@ -242,12 +246,12 @@ nav .container{
 }
 .btn{
 	background-color: transparent;
-	border: 1px solid white;
+	border: 1px solid var(--secondary-color);
 	border-radius: 5px;
 	flex: 1;
 }
 .btn:hover{
-	background-color: white;
+	background-color: var(--secondary-color);
 }
 .btn:hover a{
 	color: black;
@@ -294,12 +298,12 @@ th{
   width: 30%;
 }
 .modal-content {
-  background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+  background: var(--primary-color);
   margin: auto;
   padding: 20px;
   width: 80%;
   border-radius: 20px;
-  color: white;
+  color: var(--secondary-color);
 }
 .modal-body{
   display: grid;
@@ -314,7 +318,7 @@ th{
   justify-content: center;
 }
 .close {
-  color: white;
+  color: var(--secondary-color);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -360,7 +364,7 @@ th{
 	transition: all 0.4s;
 	/*background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);*/
 }
-.single-product.show,.service-desc-2.show, .service-desc-1.show{
+.single-product.show,.service-desc-2.show, .service-desc-1.show, .testimonials.show{
 	opacity: 1;
 	transform: translate(0, 0);
 }
@@ -376,13 +380,13 @@ th{
 .product-click {
   border: 1px solid transparent;
   border-radius: 25px;
-  background-image: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+  background-image: var(--primary-color);
   padding: 6px 25px;
   display: inline-block;
 }
 .product-click:hover{
 	border-color: black;
-	background: white;
+	background: var(--secondary-color);
 	color: black;
 }
 #SERVICE{
@@ -424,7 +428,7 @@ th{
 .icon{
 	align-self: flex-start;
 	border-style: dashed;
-	border-color: white;
+	border-color: var(--secondary-color);
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;
@@ -458,7 +462,11 @@ section#TESTIMONIAL{
 }
 .testimonials{
 	box-shadow: 0 2px 15px -5px #222;
-	height: auto;
+	height: 200px;
+	overflow: hidden;
+	opacity: 0;
+	transform: translate(0, -50px);
+	transition: all .5s ease-in;
 	/*float: left*/
 	/*max-width: 450px;*/
 }
@@ -466,16 +474,22 @@ section#TESTIMONIAL{
 	overflow: auto;
 }
 .testimonials img{
-	max-width: 300px;	
+	/*max-width: 300px;	*/
 /*	background-image: url('../Project/img/product2.png');
 	background-size: cover;
-	background-position: center;
-	width: 100%;
-	line-height: 100%;*/
+	background-position: center;*/
+	width: 200px;
+	object-fit: cover;
+	/*line-height: 100%;*/
 	/*vertical-align: middle;*/
 	/*margin: auto;*/
 }
-
+@media screen (max-width: 768px){
+	.testimonials img{
+		width: 50vw;
+		height: 50vw;
+	}
+}
 
 /*PARTNER*/
 section#PARTNER{
@@ -537,60 +551,6 @@ footer{
 }
 
 
-
-/*OWNER*/
-#OWNER .container {
-    position: relative;
-    width: 100%;
-    min-height: 45vw;
-    overflow: hidden;
-}
- 
-.panel {
-    position: absolute;
-    width: 100vw;
-    min-height: 45vw;
-    overflow: hidden;
-}
-.bottom {
-    /*background-color: rgb(44, 44, 44);*/
-    /*background-image: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);*/
-    z-index: 1;
-}
- 
-.top {
-    /*background-color: rgb(77, 69, 173);*/
-    z-index: 2;
-    width: 50vw;
-}
-.handle {
-    height: 100%;
-    position: absolute;
-    display: block;
-    background-color: rgb(253, 171, 0);
-    width: 5px;
-    top: 0;
-    left: 50%;
-    z-index: 3;
-}
-.top h1{
-	width: 100vw;
-}
-    .panel .content {
-    	justify-content: center;
-    	align-items: center;
-        width: 100vw;
-        min-height: 40vw;
-        color: #FFF;
-    }
-    .panel img{
-        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
-        width: 25%;
-        height: 25%; 
-        margin: auto 10px;
-        border-radius: 30px;
-    }
-
 @keyframes carousel {
 	0% {
 		background: url('../Project/img/page1.jpg');
@@ -621,7 +581,7 @@ footer{
 		width: 20ch;
 	}
 }
-@media only screen and (max-width: 992px){
+@media screen and (max-width: 992px){
 	nav .container{
 		width: 90%;
 		position: static;
@@ -640,12 +600,12 @@ footer{
 		justify-content: space-evenly;
 		align-items: center;
 		position: absolute;
-		top: 70px;
+		top: 10vh;
 		left: 0;
 		right: 0;
 		z-index: -1;
 		height: 50vh;
-		background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+		background: var(--primary-color);
 		transform: translateY(-60vh);
 		transition: 1s;
 	}
@@ -679,7 +639,7 @@ footer{
 		/*justify-content: stre;*/
 	}
 }
-@media only screen and (max-width: 768px){
+@media screen and (max-width: 768px){
 	#CONTACT .container{
 		display: flex;
 		flex-direction: column;

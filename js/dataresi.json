@@ -1,0 +1,75 @@
+{
+	"DataResi":[
+		{
+			"Product": "Bugatti Chiron",
+			"Image": "product1.png",
+			"Pengirim": "Digital Otomotive",
+			"Resi":"12345678",
+			"Kurir": "JNE",
+			"Penerima": "Anya Geraldine",
+			"Estimasi": "5 Hari Lagi",
+			"Harga": "125000000",
+			"Url": "https://tokopedia.com",
+			"Describe": "Bugatti Chironbisa menjadi sebuah pilihan menarik bagi Anda para pecinta SUV. mobil ini dibangun dengan tampang yang gagah dan modern. Bugatti Chironbisa menjadi sebuah pilihan menarik bagi Anda para pecinta SUV. mobil ini dibangun dengan tampang yang gagah dan modern"
+		},
+		{
+			"Product": "Ferrari Portfino",
+			"Image": "product2.png",
+			"Pengirim": "Digital Otomotive",
+			"Resi":"1234567",
+			"Kurir": "Kilat",
+			"Penerima": "Joko Susilo",
+			"Estimasi": "3 Hari Lagi",
+			"Harga": "245000000",
+			"Url": "https://tokopedia.com",
+			"Describe": "Ferrari Portfino menekankan konsep mobil atletis nan kompak tanpa menghilangkan unsur desain tampilan(SAV) khas keluarga BMW X Series. Ferrari Portfino menekankan konsep mobil atletis nan kompak tanpa menghilangkan unsur desain tampilan(SAV) khas keluarga BMW X Series"
+		},
+		{
+			"Product": "McLaren Sroduct",
+			"Image": "product3.png",
+			"Pengirim": "Digital Otomotive",
+			"Resi":"123456",
+			"Kurir": "SiCepat",
+			"Penerima": "Donald Trump",
+			"Estimasi": "1 Hari Lagi",
+			"Harga": "929000000",
+			"Url": "https://tokopedia.com",
+			"Describe": "McLaren Senna hadir dengan kemewahan sebuah MPV. Fitur keselamatan memberikan kenyamanan ekstra yang senantiasa menemani perjalanan Anda. McLaren Senna hadir dengan kemewahan sebuah MPV. Fitur keselamatan memberikan kenyamanan ekstra yang senantiasa menemani perjalanan Anda"
+		},
+		{
+			"Product": "Porsche Series XII",
+			"Image": "product4.png",
+			"Pengirim": "Digital Otomotive",
+			"Resi":"12345",
+			"Kurir": "JNE",
+			"Penerima": "Deddy Corbuzier",
+			"Estimasi": "2 Hari Lagi",
+			"Harga": "330500000",
+			"Url": "https://tokopedia.com",
+			"Describe": "Porsche menekankan konsep mobil atletis nan kompak tanpa menghilangkan unsur desain tampilan Sports Activity Vehicle (SAV) khas keluarga BMW X Series. BMW X Series ditujukan bagi masyarakat urban aktif dan gemar berpetualang.Di sisi lain, BMW X1 juga tetap mengutamakan kenyamanan serta kemampuan berkendara impresif di medan on-road maupun off-road. "
+		},
+		{
+			"Product": "Chevrolet Corvette",
+			"Image": "product5.png",
+			"Pengirim": "Digital Otomotive",
+			"Resi":"1234",
+			"Kurir": "Pos Indonesia",
+			"Penerima": "Raditya Dika",
+			"Estimasi": "6 Hari Lagi",
+			"Harga": "478000000",
+			"Url": "https://tokopedia.com",
+			"Describe": "Bisa dibilang, Chevrolet Corvette adalah salah satu mobil yang paling fenomenal saat ini. Mengusung tampilan crossover dengan siluet bodi khas coupe, Toyota All-New C-HR ternyata banyak terinspirasi oleh diamond shape. Nama C-HR sendiri diambil dari singkatan dari Compact-High Rider yang masuk dalam jenis compact SUV dengan keandalan di semua medan jalan."
+		},
+		{
+			"Product": "Chevrolet Corvette",
+			"Image": "product5.png",
+			"Pengirim": "Digital Otomotive",
+			"Resi":"123",
+			"Kurir": "J&T",
+			"Penerima": "Bambang Suherman",
+			"Estimasi": "9 Hari Lagi",
+			"Harga": "116000000",
+			"Url": "https://tokopedia.com",
+			"Describe": "Bisa dibilang, Chevrolet Corvette adalah salah satu mobil yang paling fenomenal saat ini. Mengusung tampilan crossover dengan siluet bodi khas coupe, Toyota All-New C-HR ternyata banyak terinspirasi oleh diamond shape. Nama C-HR sendiri diambil dari singkatan dari Compact-High Rider yang masuk dalam jenis compact SUV dengan keandalan di semua medan jalan."
+		}]
+}
