@@ -157,7 +157,7 @@ nav .container{
 	padding: 5px;
 	left: 0;
 	right: 0;
-	background: inherit;
+	background: var(--primary-color);
 }
 .dropdown.grid{
 	display: none;
@@ -192,9 +192,6 @@ nav .container{
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	/*animation: carousel 12s infinite;*/
-	/*height: 100vh;*/
-	/*z-index: 1;*/
 	align-items: flex-end;
 }
 #HOME:before,#SERVICE:before,#PARTNER:before, .liquid:before{
@@ -221,7 +218,7 @@ nav .container{
 	overflow: hidden;
 	white-space: nowrap;
 	animation: type 5s infinite steps(18);
-	border-right: 4px solid blue;
+	border-right: 4px solid var(--primary-color);
 	width: 20ch;
 }
 #HOME .container{
@@ -239,10 +236,6 @@ nav .container{
 	grid-template-rows: 5fr 1.5fr 1.5fr;
 	gap: 5px;
 	grid-area: describe;
-	/*background-color: green;*/
-}
-.describe-btn{
-	/*background-color: salmon;*/
 }
 .btn{
 	background-color: transparent;
@@ -278,7 +271,6 @@ button[name="lacak"]:hover {
 	background-size: contain;
 	background-repeat: no-repeat;
 	grid-area: img;
-	/*background-color: red;*/
 }
 /*  Modal  */
 .modal {
@@ -342,17 +334,9 @@ th{
 #PRODUCT{
 	height: auto;
 }
-#PRODUCT .container{
-	/*grid-template-rows: 1fr 10fr;*/
-
-}
-.product-head{
-	/*background-color: green;*/
-}
 .product-body{
 	grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
 	gap: 30px;
-	/*background:linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);*/
 }
 .single-product{
 	grid-template-rows: 4fr 1fr 3fr;
@@ -362,7 +346,6 @@ th{
 	opacity: 0;
 	transform: translate(0, 50px);
 	transition: all 0.4s;
-	/*background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);*/
 }
 .single-product.show,.service-desc-2.show, .service-desc-1.show, .testimonials.show{
 	opacity: 1;
@@ -390,15 +373,12 @@ th{
 	color: black;
 }
 #SERVICE{
-	/*height: auto;*/
 	background: url('../img/page3.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.service-head{
-	/*background-color: maroon;*/
-}
+
 .service-body{
 	grid-template-areas: 
 	'describe1 descimg describe2'
@@ -407,7 +387,7 @@ th{
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	z-index: 99;
-	/*background-color: teal;*/
+
 }
 .service-desc-1{
 	grid-area: describe1;
@@ -415,7 +395,6 @@ th{
 	opacity: 0;
 	transform: translate(-50px,0);
 	transition: 1s;
-	/*background-color: green;*/
 }
 .service-item{
 	flex: 5;
@@ -423,7 +402,6 @@ th{
 .service-icon{
 	flex: 1;
 	justify-content: center;
-	/*background-color: blue;*/
 }
 .icon{
 	align-self: flex-start;
@@ -442,7 +420,6 @@ th{
 	opacity: 0;
 	transform: translate(50px,0);
 	transition: 1s;
-	/*background-color: salmon;*/
 }
 .service-img{
 	grid-area: descimg;
@@ -467,22 +444,13 @@ section#TESTIMONIAL{
 	opacity: 0;
 	transform: translate(0, -50px);
 	transition: all .5s ease-in;
-	/*float: left*/
-	/*max-width: 450px;*/
 }
 .testimonials-body{
 	overflow: auto;
 }
 .testimonials img{
-	/*max-width: 300px;	*/
-/*	background-image: url('../Project/img/product2.png');
-	background-size: cover;
-	background-position: center;*/
 	width: 200px;
 	object-fit: cover;
-	/*line-height: 100%;*/
-	/*vertical-align: middle;*/
-	/*margin: auto;*/
 }
 @media screen (max-width: 768px){
 	.testimonials img{
@@ -504,8 +472,6 @@ section#PARTNER{
 }
 .partner-img img{
 	max-width: 70%;
-	/*display: grid;*/
-	/*place-self: center;*/
 }
 
 /*CONTACT*/
@@ -516,9 +482,6 @@ section#PARTNER{
 #CONTACT .container{
 	grid-template-columns: 1fr 1fr;
 	gap: 100px;
-}
-.contact-form{
-	/*background-color: red;*/
 }
 .contact-info{
 	background-color: black;
@@ -538,7 +501,6 @@ input[name="name"]{
 }
 .info{
 	flex-direction: column;
-	/*background-color: salmon;*/
 }
 .contact{
 	align-items: center;
@@ -549,7 +511,6 @@ input[name="name"]{
 footer{
 	background-color: black;
 }
-
 
 @keyframes carousel {
 	0% {
@@ -590,7 +551,7 @@ footer{
 		flex-direction: column;
 	}
 	.nav-link:hover{
-		background-color: inherit;
+		background-color: var(--primary-color);
 	}
 	.toggle{
 		display: flex;
@@ -636,7 +597,6 @@ footer{
 	#CONTACT .container{
 		width: 90%;
 		gap: 10px;
-		/*justify-content: stre;*/
 	}
 }
 @media screen and (max-width: 768px){

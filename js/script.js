@@ -162,14 +162,14 @@ $('button[name="lacak"]').click(function(){
 $('.close').click(function(){
     $('.modal').css({"display": "none"});
 })
-// document.addEventListener('DOMContentLoaded', function() {
-//     var parent = document.querySelector('#OWNER .container'),
-//         topPanel = parent.querySelector('.top'),
-//         handle = parent.querySelector('.handle'),
-//         delta = 0;
-//     parent.addEventListener('mousemove', function(event) {
-//         delta = (event.clientX - window.innerWidth / 2) * 0.5;
-//         handle.style.left = event.clientX + delta + 'px';
-//         topPanel.style.width = event.clientX + delta + 'px';
-//     });
-// });
+
+// colour
+$('.btn.mx-5:first-child').hover(function(){
+    $('body').get(0).style.setProperty("--primary-color","linear-gradient(to right, #290000 1%,#550010 24%,#b50022 67%,#d9004d 100%)");
+});
+$('.btn.mx-5:nth-child(2)').hover(function(){
+    $('body').get(0).style.setProperty("--primary-color","linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%)");
+});
+$('.btn.mx-5:last-child').hover(function(){
+    $('body').get(0).style.setProperty("--primary-color","linear-gradient(to right, #002903 1%,#1c5500 24%,#44b500 67%,#75d900 100%)");
+});
